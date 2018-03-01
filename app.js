@@ -6,8 +6,8 @@ const path = require('path');
 var app = express();
 
 //using static content
-app.set(express.static(__dirname + '/public'));
-app.use(express.static(path.join(__dirname, '/public')));
+app.set(express.static(__dirname + '/public'));// use it for express only
+app.use(express.static(path.join(__dirname, '/public')));//use it for HBS handlebar js moduleheroki
 
 //using the express framwork
 app.set('view engine','hbs');
